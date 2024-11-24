@@ -1,100 +1,80 @@
 /* Corpo della pagina */
 body {
-  background: linear-gradient(135deg, #535353, #23282b); /* Gradiente di sfondo */
   margin: 0;
   padding: 0;
+  font-family: 'Arial', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  font-family: 'Arial', sans-serif;
-  color: #333;
-}
-
-/* Titolo */
-h1 {
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: #990000; /* Rosso per il titolo */
+  overflow: hidden;
+  background: #121212;
+  flex-direction: column; /* Imposta il layout in colonna */
 }
 
 /* Contenitore */
-#container {
+#title-container {
   text-align: center;
-  background-color: #ffffff;
-  border-radius: 15px;
+  background-color: #1F1F1F;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-  padding: 30px;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5); /* Ombra decisa e scura */
+}
+
+#button-container {
+  text-align: center;
+  background-color: #1F1F1F;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  padding: 25px;
   width: 90%;
   max-width: 500px;
-  transition: transform 0.3s;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5); /* Ombra decisa e scura */
 }
 
-/* Pulsanti */
-#buttons button {
-  background-color: #990000; /* Rosso per i pulsanti */
-  color: white;
+/* Pulsanti in layout Grid */
+#buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Due colonne uguali */
+  gap: 20px; /* Spaziatura tra i pulsanti */
+}
+
+button {
+  padding: 15px 20px;
+  font-size: 1.2em;
+  color: #121212;
+  background-color: #c493fd;
   border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 1em;
-  margin: 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s;
+  transition: background-color 0.3s, border-radius 0.3s; /* Transizione anche per border-radius */
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5); /* Ombra decisa e scura */
+  border-radius: 10px; /* Angoli iniziali retti */
+  font-weight: bold; /* Rende il testo in grassetto */
+  font-variant-caps: small-caps; /* Trasforma tutto in maiuscoletto */
+  text-transform: uppercase; /* Trasforma il testo in maiuscolo */
 }
 
-#buttons button:hover {
-  background-color: #45a049;
-  transform: scale(1.05);
+button .button-description {
+  display: block; /* Viene messo su una nuova riga */
+  font-size: 0.6em; /* Dimensione del testo più piccola */
+  color: #121212; /* Colore del testo per la descrizione */
+  margin-top: 5px; /* Distanza dal titolo */
+  font-weight: normal; /* Se vuoi che la descrizione non sia in grassetto */
+}
+  
+button:hover {
+  background-color: #bb86fc; /* Colore al passaggio del mouse */
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5); /* Ombra decisa e scura */
+  border-radius: 25px; /* Angoli arrotondati al passaggio del mouse */
 }
 
-#buttons button:active {
-  background-color: #397d3f;
-}
-
-/* Petali rosa */
-.petals::before,
-.petals::after {
-  content: '';
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  background: rgba(255, 182, 193, 0.8); /* Colore rosa chiaro */
-  border-radius: 50%;
-  animation: fall 6s linear infinite, sway 2s ease-in-out infinite;
-  pointer-events: none;
-}
-
-.petals::before {
-  box-shadow: 0 0 10px rgba(255, 182, 193, 0.6);
-  top: -10%;
-  left: 10%;
-}
-
-.petals::after {
-  box-shadow: 0 0 10px rgba(255, 105, 180, 0.8);
-  top: -10%;
-  left: 80%;
-  animation-delay: 3s;
-}
-
-/* Animazioni */
-@keyframes fall {
-  0% {
-    transform: translateY(-100%) rotate(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(100vh) rotate(360deg);
-    opacity: 0;
-  }
-}
-
-@keyframes sway {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(20px);
-  }
+h1 {
+  font-size: 2.5em; /* Imposta la dimensione del font */
+  color: #c493fd; /* Imposta il colore del testo */
+  font-weight: bold; /* Rende il testo in grassetto */
+  text-transform: uppercase; /* Trasforma il testo in maiuscolo */
+  font-variant-caps: small-caps; /* Applica l'effetto maiuscoletto (opzionale) */
+  text-align: center; /* Allinea il testo al centro */
+  text-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5); /* Ombra decisa e scura */
 }
