@@ -55,7 +55,7 @@ button {
 
 button .button-description {
   display: block; /* Viene messo su una nuova riga */
-  font-size: 1em; /* Dimensione del testo più piccola */
+  font-size: 0.9em; /* Dimensione del testo più piccola */
   color: #121212; /* Colore del testo per la descrizione */
   margin-top: 5px; /* Distanza dal titolo */
   font-weight: normal; /* Se vuoi che la descrizione non sia in grassetto */
