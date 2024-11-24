@@ -42,7 +42,7 @@ body {
 
 button {
   padding: 15px 20px;
-  font-size: 1.2em;
+  font-size: 1em;
   color: #121212;
   background-color: #c493fd;
   border: none;
@@ -51,8 +51,6 @@ button {
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5); /* Ombra decisa e scura */
   border-radius: 10px; /* Angoli iniziali retti */
   font-weight: bold; /* Rende il testo in grassetto */
-  font-variant-caps: small-caps; /* Trasforma tutto in maiuscoletto */
-  text-transform: uppercase; /* Trasforma il testo in maiuscolo */
 }
 
 button .button-description {
